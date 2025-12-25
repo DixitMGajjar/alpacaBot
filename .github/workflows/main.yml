@@ -28,4 +28,4 @@ jobs:
           ALPACA_API_KEY: ${{ secrets.PAIRS_TRADING_API_KEY }}
           ALPACA_API_SECRET: ${{ secrets.PAIRS_TRADING_API_SECRET }}
         run: |
-          python dailyp.py
+          python main.py
