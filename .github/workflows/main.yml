@@ -1,4 +1,4 @@
-name: Daily Trading Bot (Chaman Bond)
+name: Daily Trading Bot 
 
 on:
   schedule:
