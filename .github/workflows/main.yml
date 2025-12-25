@@ -1,0 +1,31 @@
+name: Daily Trading Bot (Chaman Bond)
+
+on:
+  schedule:
+    # Runs at 9:35 AM ET (13:35 UTC) every Mon-Fri
+    - cron: '35 13 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  run_daily:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        # CHANGED: 'alpaca-trade-api' -> 'alpaca-py'
+        run: pip install pandas numpy alpaca-py scikit-learn scipy
+
+      - name: Run Daily Bot
+        env:
+          # Maps the GitHub Secret 'PAIRS_TRADING_API_KEY' to the Python var 'ALPACA_API_KEY'
+          ALPACA_API_KEY: ${{ secrets.PAIRS_TRADING_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.PAIRS_TRADING_API_SECRET }}
+        run: |
+          python dailyp.py
