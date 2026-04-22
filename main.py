@@ -38,7 +38,7 @@ API_SECRET = os.environ.get('PAIRS_TRADING_SECRET', 'YOUR_SECRET_KEY_HERE')
 
 
 # Trading Parameters
-SYMBOL = 'QQQ'
+SYMBOL = 'BTC/USD'
 LOOKBACK_HOURS = 2520  # ~3 months
 
 # Volatility & Risk Settings (Hourly Adjusted)
