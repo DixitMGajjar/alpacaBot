@@ -1,7 +1,7 @@
 # Automated Hourly Trading Bot 📈
 
 ![Build Status](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/main.yml/badge.svg)
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Python] (https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Platform](https://img.shields.io/badge/Platform-Alpaca%20Paper-yellow)
 
 An automated algorithmic trading engine designed for the **Alpaca Paper Trading API**. This bot executes an hourly mean-reversion and trend-following strategy on **QQQ** (Nasdaq-100), utilizing a suite of advanced signal processing techniques and dynamic risk management.
